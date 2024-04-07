@@ -1,0 +1,87 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/asset/css/style.css" />
+        <title>login NubeNet</title>
+        <link rel="Nubenet icon" href="/asset/img/icons/1_bc094546-fc26-4713-b0e3-83313ffe7e93.png">
+    </head>
+    <body>
+        <!-- Sección de estilo y estructura de la página-->
+        <div class="titulo">
+            <header>SISTEMA DE INICIO DE SECCIÓN Y REGISTRO</header>
+        </div>
+        <!-- Contenedor del formulario de registro -->
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="#" id="">
+                        <h1>Crea tu Cuenta</h1>
+                        <!--Contenedor de botones de inicio de sesión con redes sociales-->
+                        <div class="social-container">
+                            <a href="https://www.facebook.com/" class="social>">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="social>">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://ve.linkedin.com/" class="social>">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                        <!--Formulario de registro con campos de entrada-->
+                        <span>o usa tu email como registro</span>
+                        <input type="text" placeholder="Nombre" required/>
+                        <input type="email" placeholder="Correo" required/>
+                        <input type="password" placeholder="Contraseña"required/>
+                        <button id="lila">Registrar</button>
+                    </form>
+                </div>
+                <!--Contenedor del formulario de inicio de sesión-->
+                <div class="form-container sign-in-container">
+                    <form action="#" id="blue">
+                        <h1>Iniciar Sesión</h1>
+                        <!--Contenedor de botones de inicio de sesión con redes sociales-->
+                        <div class="social-container">
+                            <a href="https://www.facebook.com/" class="social">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="social>">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://ve.linkedin.com/" class="social">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                        <!--Formulario de inicio de sesión con campos de entrada-->
+                        <span>o usa tu email</span>
+                        <input type="email" placeholder="Correo" id="correo"/>
+                        <input type="password" placeholder="Contraseña" id="Contraseña" required/>
+                        <a href="#">Olvidaste tu contraseña?</a>
+                        <button type="submit" id="ini">Iniciar sesión</button>
+                    </form>
+                </div>
+                <!--Contenedor del efecto overlay para cambiar entre registro e inicio de sesión-->
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <!--Paneles overlay para cambio entre registro e inicio de sesión-->
+                        <div class="overlay-panel overlay-left">
+                            <h1>¡Bienvenido!</h1>
+                            <p>
+                                Inicia sesión con tu cuenta
+                            </p>
+                            <button class="ghost" id="signIn">Inicia sesión</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hola!!!</h1>
+                            <p>Crear tu cuenta</p>
+                            <button class="ghost" id="signUp" >Registrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <!--Enlace al archivo JavaScript para la funcionalidad de inicio de sesión y registro-->
+            <script src="/asset/js/loggin.js"></script>
+    </body>
+</html>

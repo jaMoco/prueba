@@ -1,0 +1,410 @@
+/*Importación de la fuente Poppins desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/*Estilos globales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Estilos para el cuerpo*/
+body {
+    background-image: url(/asset/img/fondos/fotor-2024032517134.jpg); 
+    display:flex;
+    min-height: 100vh;
+    flex-direction:column;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/*Estilos para el encabezado*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(#cb7b03, #974d28cf , hsl(249, 96%, 21%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    gap: 40px;
+}
+
+/*Estilos para el logotipo*/
+.logo {
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*Estilos para los enlaces de la barra de navegación*/
+.barra a {
+    position: relative;
+    font-size: 17px;
+    color: #0b0101;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+/*Estilos para el efecto de línea debajo de los enlaces de la barra de navegación*/
+.barra a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos al pasar el ratón por encima de los enlaces de la barra de navegación*/
+.barra a:hover::after{
+    bottom: -3px;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*Estilos adicionales para el efecto de línea debajo de los enlaces de la barra de navegación*/
+.barra a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos adicionales al pasar el ratón por encima de los enlaces de la barra de navegación*/
+.barra a:hover::before{
+    top: -3px;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+/*Estilos para los enlaces de la barra de navegación al pasar el ratón por encima o estar activos*/
+.barra a:hover,
+.barra a.active {
+    color: rgb(7, 0, 0);
+}
+
+/*Estilos para los íconos de la barra de navegación*/
+.barra i {
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+/*Estilos para los botones de la barra de navegación*/
+.barra button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Estilos para el contenido principal*/
+main {
+    padding: 10px 0px 0px;
+    margin-bottom: 15px;
+    justify-items: center;
+    justify-content: center;
+    align-items:center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcfcfce0;
+    font-weight: 0;
+}
+
+/*Estilos para los artículos*/
+article {
+    margin: 10%;
+    padding: 3px;
+    justify-content: center;
+    align-items:center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    color: #fcfcfce0;
+    font-weight: 750;
+}
+
+/*Estilos para el encabezado h1 en la sección "acerca"*/
+.acerca h1 {
+    padding: 3%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3em;
+    color: #fcfcfce0;
+    font-weight: 750;
+}
+
+/*Estilos para la primera letra del primer párrafo dentro de la sección "acerca"*/
+.acerca p:first-of-type:first-letter {
+    float:left;
+    font-size: 4em;
+    line-height: 0.8em;
+    padding-top: 0.05em;
+    padding-right: 0.05em;
+}
+
+/*Estilos para la sección "acerca"*/
+.acerca {
+    text-align: justify;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 2px auto;
+    padding: 10px;
+}
+
+/*Estilos para las secciones*/
+section {
+    padding: 10%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcfcfce0;
+    font-weight: 0;
+}
+
+/*Estilos para los encabezados h3 dentro de las secciones*/
+section h3 {
+    display: flex;
+    padding: 5%;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: #fcfcfce0;
+    font-weight: 750;
+}
+
+/*Estilos para la lista descriptiva dentro de las secciones*/
+section .nosotros dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Estilos para los términos y definiciones dentro de la lista descriptiva*/
+section .nosotros dl dt,
+section .nosotros dl dd {
+    width: calc(40% - 40px);
+    padding: 1px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+}
+
+
+/*Estilos para los términos dentro de la lista descriptiva*/
+section .nosotros dl dt:nth-child(odd) {
+    text-align: left;
+    font-size: 2.5em;
+}
+
+/*Estilos para las definiciones dentro de la lista descriptiva*/
+section .nosotros dl dt:nth-child(even) {
+    text-align: right;
+}
+
+/*Estilos adicionales para las definiciones dentro de la lista descriptiva*/
+section .nosotros dl dd {
+    margin: 5%;
+    padding-left: 2px;
+}
+
+/*Estilos para los encabezados dentro de las secciones*/
+section .nosotros  dt {
+    padding:3%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    color: #fcfcfce0;
+    font-weight: 750;
+    margin-bottom: 20px;
+}
+
+/*Estilos para las definiciones dentro de las secciones*/
+section .nosotros  dd {
+    padding:2%;
+    justify-content: center;
+    align-items: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    color: #fcfcfce0;
+    font-weight: 750;
+    margin-bottom: 20px;
+}
+
+/*Estilos para el pie de página*/
+footer{
+    position: flex;
+    margin-top: 40px;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    background: #111;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 2%;
+    color: #fff;
+}
+
+/*Estilos para el contenido del pie de página*/
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+/*Estilos para los encabezados h3 dentro del pie de página*/
+.footer-content h3{
+    display: flex;
+    margin-bottom: 1%;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para las columnas del pie de página*/
+.footer-columna {
+    display:flex;
+    flex-direction:row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos para las divisiones dentro de las columnas del pie de página*/
+.footer-columna > div {
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 70px);
+    padding: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/*Estilos para el contenido interno del pie de página*/
+.footer-inter{
+    justify-content:center;
+    align-items: center;
+    align-items: center;
+}
+
+/*Estilos para los encabezados h4 dentro del pie de página*/
+.footer-inter h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para los elementos de lista dentro del pie de página*/
+.footer-inter li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 5px;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/*Estilos para la información de contacto dentro del pie de página*/
+.footer-Contac {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos para los encabezados h4 dentro de la información de contacto*/
+.footer-Contac h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para las divisiones dentro de la información de contacto*/
+.footer-Contac div {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0;
+    margin-top: 1%;
+    line-height: 10px;
+}
+
+/*Estilos para los iconos dentro de la información de contacto*/
+.footer-Contac div i {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+/*Estilos para el texto adicional dentro del pie de página*/
+.fOQ {
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/*Estilos para los enlaces dentro del pie de página*/
+.fOQ a {
+    text-decoration-line: underline;
+    color: #fff;
+}
+
+/*Estilos para el pie de página inferior*/
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*Estilos para el texto dentro del pie de página inferior*/
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*Estilos para el texto en mayúsculas dentro del pie de página inferior*/
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

@@ -1,0 +1,318 @@
+/*Importación de la fuente de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/*Estilos globales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Estilos para el cuerpo del documento*/
+body {
+    background-image: url(/asset/img/fondos/fotor-2024032517134.jpg); 
+    display:flex;
+    min-height: 100vh;
+    flex-direction:column;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/*Estilos para el encabezado*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(#cb7b03, #974d28cf , hsl(249, 96%, 21%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    gap: 40px;
+}
+
+/*Estilos para el logotipo*/
+.logo {
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*Estilos para los enlaces en la barra de navegación*/
+.barra a {
+    position: relative;
+    font-size: 17px;
+    color: #0b0101;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+/*Estilos para el efecto de resaltado en los enlaces*/
+.barra a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos para el efecto de resaltado en los enlaces al pasar el mouse*/
+.barra a:hover::after{
+    bottom: -3px;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*Estilos adicionales para el efecto de resaltado en los enlaces*/
+.barra a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos para el efecto de resaltado en los enlaces al pasar el mouse*/
+.barra a:hover::before{
+    top: -3px;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+/*Estilos para los enlaces activos y al pasar el mouse*/
+.barra a:hover,
+.barra a.active {
+    color: rgb(7, 0, 0);
+}
+
+/*Estilos para los iconos en la barra de navegación*/
+.barra i {
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+/*Estilos para los botones en la barra de navegación*/
+.barra button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Estilos para el contenido principal*/
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/*Estilos para los encabezados h1*/
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    z-index: 100;
+    gap: 40px;
+    position: relative;
+    padding: 40px 50px;
+}
+
+/*Estilos para las secciones*/
+section {
+    margin-bottom: 30px;
+}
+
+/*Estilos para los artículos*/
+article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+/*Estilos para encabezados de tercer nivel*/
+h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/*Estilos para párrafos*/
+p {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/*Estilos para el pie de página*/
+footer{
+    position: flex;
+    margin-top: 40px;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    background: #111;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 2%;
+    color: #fff;
+}
+
+/*Estilos para el contenido del pie de página*/
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+/*Estilos para los encabezados h3 dentro del contenido del pie de página*/
+.footer-content h3{
+    display: flex;
+    margin-bottom: 1%;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para las columnas del pie de página*/
+.footer-columna {
+    display:flex;
+    flex-direction:row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos para las divisiones dentro de las columnas del pie de página*/
+.footer-columna > div {
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 70px);
+    padding: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/*Estilos para el contenido interno del pie de página*/
+.footer-inter{
+    justify-content:center;
+    align-items: center;
+    align-items: center;
+}
+
+/*Estilos para los encabezados h4 dentro del contenido interno del pie de página*/
+.footer-inter h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para los elementos de lista dentro del contenido interno del pie de página*/
+.footer-inter li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 5px;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/*Estilos para la información de contacto dentro del pie de página*/
+.footer-Contac {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos para los encabezados h4 dentro de la información de contacto*/
+.footer-Contac h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos para las divisiones dentro de la información de contacto*/
+.footer-Contac div {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0;
+    margin-top: 1%;
+    line-height: 10px;
+}
+
+/*Estilos para los iconos dentro de la información de contacto*/
+.footer-Contac div i {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+/*Estilos para el texto adicional dentro del pie de página*/
+.fOQ {
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/*Estilos para los enlaces dentro del texto adicional del pie de página*/
+.fOQ a {
+    text-decoration-line: underline;
+    color: #fff;
+}
+
+/*Estilos para el pie de página inferior*/
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*Estilos para el texto dentro del pie de página inferior*/
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*Estilos para el texto en mayúsculas dentro del pie de página inferior*/
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

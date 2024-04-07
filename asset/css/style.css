@@ -1,0 +1,254 @@
+/*Importación de la fuente de Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
+
+/*Estilos generales*/
+* {
+box-sizing: border-box;
+}
+
+/*Estilos del cuerpo del documento*/
+body {
+font-family: "Poppins", sans-serif;
+background: linear-gradient(#cb7b03, #974d28cf , hsl(249, 96%, 21%)); 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: -20px 0 50px;
+}
+
+/*Estilos del título principal*/
+h1 {
+font-weight: bold;
+margin: 0;
+}
+
+/*Estilos del párrafo*/
+p {
+font-size: 14px;
+font-weight: 100;
+line-height: 20px;
+letter-spacing: 0.5px;
+margin: 20px 0 30px;
+}
+
+/*Estilos del texto secundario*/
+span {
+font-size: 12px;
+}
+
+/*Estilos del enlace*/
+a {
+color: #228be6;
+font-size: 14px;
+text-decoration: none;
+margin: 15px 0;
+}
+
+/*Estilos del texto con color rojo*/
+#red {
+color: rgb(255, 68, 6);
+}
+
+/*Estilos del contenedor principal*/
+.container {
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0, 10px 10px rgba(0, 0, 0, 0.22);
+position: relative;
+overflow: hidden;
+width: 768px;
+max-width: 100%;
+min-height: 480px;
+}
+
+/*Estilos del formulario*/
+.form-container form {
+background: #fff;
+display: flex;
+flex-direction: column;
+padding: 0 50px;
+height: 100%;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/*Estilos del contenedor de redes sociales*/
+.social-container {
+margin: 20px 0;
+}
+
+/*Estilos de los enlaces de redes sociales*/
+.social-container a {
+border: 1px solid #ddd;
+border-radius: 50%;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+margin: 0 5px;
+height: 40px;
+width: 40px;
+}
+
+/*Estilos de los campos de entrada del formulario*/
+.form-container input {
+background: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
+}
+
+/*Estilos del botón*/
+button {
+border-radius: 20px;
+border: 1px solid rgb(255, 149, 0);
+background: rgb(255, 149, 0);
+color: #000000;
+font-size: 12px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
+}
+
+
+/*Estilos del botón con color lila*/
+#lila {
+background: #610c8f;
+border: 1px solid #be4bdb;
+}
+
+/*Estilos del botón cuando está activo*/
+button:active {
+transform: scale(0.95);
+}
+
+/*Estilos del botón cuando está enfocado*/
+button:focus {
+outline: none;
+}
+
+
+/*Estilos del botón de tipo fantasma*/
+button.ghost {
+background: transparent;
+border-color: #050000;
+}
+
+/*Estilos del contenedor del formulario*/
+.form-container {
+position: absolute;
+top: 0;
+height: 100%;
+transition: all 0.6s ease-in-out;
+}
+
+/*Estilos del contenedor de inicio de sesión*/
+.sign-in-container {
+left: 0;
+width: 50%;
+z-index: 2;
+}
+
+
+/*Estilos del contenedor de registro*/
+.sign-up-container {
+left: 0;
+width: 50%;
+z-index: 1;
+}
+
+/*Estilos del contenedor de superposición*/
+.overlay-container {
+position: absolute;
+top: 0;
+left: 50%;
+width: 50%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.6s ease-in-out;
+z-index: 100;
+}
+
+/* Estilos de la superposición */
+.overlay {
+background: url(/asset/img/fondos/fotor-ai-202403251739.jpg);
+background-repeat:round;
+background-size: 385px 478px;
+color: #000000;
+position: relative;
+left: -100%;
+height: 100%;
+width: 200%;
+transform: translateX(0);
+transition: tranform 0.6s ease-in-out;
+}
+
+/*Estilos del panel de superposición*/
+.overlay-panel {
+position: absolute;
+top: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 40px;
+height: 100%; 
+width: 50%;
+text-align: center;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+}
+
+
+/*Estilos del panel de superposición a la derecha*/
+.overlay-right {
+right: 0;
+transform: translateX(0);
+}
+
+/*Estilos del panel de superposición a la izquierda*/
+.overlay-left {
+background-image: url(/asset/img/fondos/fotor-ai-2024032517155.jpg);
+background-size: 385px 478px;;
+transition: translateX(-20%);
+}
+
+/*Animaciones*/
+
+/*Mover el inicio de sesión a la derecha*/
+.container.right-panel-active .sign-in-container {
+transform: translateX(100%);
+}
+
+/*Mover superposición a la izquierda */
+.container.right-panel-active .overlay-container {
+transform: translateX(-100%);
+}
+
+/*Traer registrarse en lugar de iniciar sesión */
+.container.container.right-panel-active .sign-up-container {
+transform: translateX(100%);
+opacity: 1;
+z-index: 5;
+}
+
+/*Mover superposición de nuevo a la derecha */
+.container.right-panel-active .overlay {
+transform: translateX(50%);
+}
+
+/*Mover el panel de superposición a la izquierda*/
+.container.right-panel-active .overlay-left {
+transform: translateX(0);
+}
+
+/*Mover el panel de superposición a la derecha*/
+.container.right-panel-active .overlay-right {
+transform: translateX(20%);
+}
+

@@ -1,0 +1,471 @@
+/*Importación de la fuente Poppins desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/*Estilos generales para todo el documento*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Estilos para el cuerpo del documento*/
+body {
+    background-image: url(../img/fondos/fotor-2024032517134.jpg); 
+    display:flex;
+    min-height: 100%;
+    flex-direction:column;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
+/*Estilos para el encabezado*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: linear-gradient(#cb7b03, #974d28cf , hsl(249, 96%, 21%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    gap: 40px;
+}
+
+
+/*Estilos para el logotipo*/
+.logo {
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*Estilos para los enlaces en la barra de navegación*/
+.barra a {
+    position: relative;
+    font-size: 17px;
+    color: #0b0101;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+/*Estilos para los enlaces en la barra de navegación al pasar el mouse*/
+.barra a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos para la animación al pasar el mouse sobre los enlaces*/
+.barra a:hover::after{
+    bottom: -3px;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/*Estilos para la pseudo-elemento antes al pasar el mouse sobre los enlaces*/
+.barra a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+/*Estilos para la animación al pasar el mouse sobre los enlaces*/
+.barra a:hover::before{
+    top: -3px;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+/*Estilos para los enlaces de la barra de navegación al pasar el mouse o estar activos*/
+.barra a:hover,
+.barra a.active {
+    color: rgb(7, 0, 0);
+}
+
+/*Estilos para los iconos en la barra de navegación*/
+.barra i {
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+/*Estilos para los botones en la barra de navegación*/
+.barra button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Estilos para el contenedor principal*/
+.container{
+    position: flex;
+    margin-top: 10%;
+    margin: 10% 35%;
+    width: 35%;
+    height: 105px;
+    background: linear-gradient(#ffffff, #bdf5ec, hsl(210, 94%, 69%));
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+/*Estilos para la caja de búsqueda*/
+.search-box{
+    width: 100%;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Estilos para el input dentro de la caja de búsqueda*/
+.search-box input{
+    color: #000000;
+    width: 65%;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+/*Estilos para el marcador de posición del input dentro de la caja de búsqueda*/
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+
+/*Estilos para el botón dentro de la caja de búsqueda*/
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+/*Estilos al pasar el mouse sobre el botón dentro de la caja de búsqueda*/
+.search-box button:hover{
+    color: #ffffff;
+    background: #00a6ff;
+}
+
+/*Estilos para el icono dentro de la caja de búsqueda*/
+.search-box i{
+    position: absolute;
+    color: #000000;
+    font-size: 28px;
+}
+
+/*Estilos para el contenedor del clima*/
+.weather-box{
+    text-align: center;
+}
+
+/*Estilos para la imagen dentro del contenedor del clima*/
+.weather-box img{
+    width: 30%;
+    margin-top: 30px;
+}
+
+/*Estilos para la temperatura dentro del contenedor del clima*/
+.weather-box .temperature{
+    position: relative;
+    color: #06283D;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+/*Estilos para la parte del texto de la temperatura dentro del contenedor del clima*/
+.weather-box .temperature span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+/*Estilos para la descripción dentro del contenedor del clima*/
+.weather-box .description{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/*Estilos para los detalles del clima*/
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/*Estilos para la humedad y el viento dentro de los detalles del clima*/
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+/*Estilos para la humedad dentro de los detalles del clima*/
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/*Estilos para el viento dentro de los detalles del clima*/
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/*Estilos para los iconos dentro de los detalles del clima*/
+.weather-details i{
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+/*Estilos para los textos dentro de los detalles del clima*/
+.weather-details span{
+    color: #06283D;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/*Estilos para el mensaje de "no encontrado"*/
+.weather-details p{
+    color: #06283D;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/*Estilos para el mensaje de "no encontrado"*/
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+/*Estilos para la imagen dentro del mensaje de "no encontrado"*/
+.not-found img{
+    width: 65%;
+}
+
+/*Estilos para el texto dentro del mensaje de "no encontrado"*/
+.not-found p{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 12px;
+}
+
+/*Estilos para la animación de aparición*/
+.weather-box, .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+/*Animación de aparición*/
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+/*Keyframes de la animación de aparición*/
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/*Estilos generales del pie de página*/
+footer{
+    position: flex;
+    margin-top: 40px;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    background: #111;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 2%;
+    color: #fff;
+}
+
+/*Estilos del contenido del pie de página*/
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+/*Estilos del título del pie de página*/
+.footer-content h3{
+    display: flex;
+    margin-bottom: 1%;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos de la columna del pie de página*/
+.footer-columna {
+    display:flex;
+    flex-direction:row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos de los elementos dentro de la columna del pie de página*/
+.footer-columna > div {
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 70px);
+    padding: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+/*Estilos de la sección intermedia del pie de página*/
+.footer-inter{
+    justify-content:center;
+    align-items: center;
+    align-items: center;
+}
+
+/*Estilos del título de la sección intermedia del pie de página*/
+.footer-inter h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos de los elementos de lista dentro de la sección intermedia del pie de página*/
+.footer-inter li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 5px;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+/*Estilos de la sección de contacto del pie de página*/
+.footer-Contac {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Estilos del título de la sección de contacto del pie de página*/
+.footer-Contac h4 {
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+/*Estilos de los elementos dentro de la sección de contacto del pie de página*/
+.footer-Contac div {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0;
+    margin-top: 1%;
+    line-height: 10px;
+}
+
+/*Estilos del ícono dentro de los elementos de la sección de contacto del pie de página*/
+.footer-Contac div i {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+/*Estilos de la sección de Preguntas Frecuentes del pie de página*/
+.fOQ {
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/*Estilos del enlace dentro de la sección de Preguntas Frecuentes del pie de página*/
+.fOQ a {
+    text-decoration-line: underline;
+    color: #fff;
+}
+
+/*Estilos del fondo del pie de página*/
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*Estilos del texto dentro del fondo del pie de página*/
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*Estilos del texto en mayúsculas dentro del fondo del pie de página*/
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
